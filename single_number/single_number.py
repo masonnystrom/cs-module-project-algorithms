@@ -3,9 +3,11 @@ Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
 def single_number(arr):
-    # Your code here
-
-    pass
+    # ^= Greater than or equal to. so True if left operand is greater than or equal to the right
+    result = 0
+    for i in arr:
+        result ^= i
+    return result
 
 
 if __name__ == '__main__':
