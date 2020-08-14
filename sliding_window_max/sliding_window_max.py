@@ -3,10 +3,15 @@ Input: a List of integers as well as an integer `k` representing the size of the
 Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
-    # Your code here
-
-    pass
-
+    results = []
+    maximum = 0
+    for i in range(len(nums) - k + 1):
+        maximum = nums[i]
+        for j in range(1, k):
+            if nums[i+j] > maximum:
+                maximum = nums[i+j]
+        results.append(maximum)
+    return results
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation 

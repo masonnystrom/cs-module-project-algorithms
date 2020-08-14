@@ -9,6 +9,10 @@ def single_number(arr):
         result ^= i
     return result
 
+# O(n^2) runtime
+# for x in arr: # O(n)
+#     if arr.count(x) == 1: # O(N)
+#         return x
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
